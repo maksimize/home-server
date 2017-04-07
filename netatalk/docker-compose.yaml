@@ -1,0 +1,10 @@
+version: "2"
+services:
+
+  netatalk:
+    build: .
+    volumes:
+      - "/media/share:/media/share"
+      - "/media/timemachine:/media/timemachine"
+    ports:
+     - "548:548"
