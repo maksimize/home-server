@@ -1,13 +1,16 @@
+{{- range .Values.transmission.volumes }}
+---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  name: pvc-{{ .volName }}
   labels:
     type: local
-  name: pvc-downloads
 spec:
   storageClassName: local-path
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: {{ .storage }}
+{{- end }}

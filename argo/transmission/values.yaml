@@ -1,0 +1,18 @@
+PGID: "501"
+PUID: "501"
+TZ: "Etc/UTC"
+hostname: lima-rancher-desktop
+transmission:
+  volumes:
+    - volName: downloads
+      mountPath: /downloads
+      localPath: /Users/mahmoudali/Downloads/tmp/transmision/downloads
+      storage: 1Gi
+    - volName: config
+      mountPath: /config
+      localPath: /Users/mahmoudali/Downloads/tmp/transmision/config
+      storage: 10Mi
+    - volName: watch
+      mountPath: /watch
+      localPath: /Users/mahmoudali/Downloads/tmp/transmision/watch
+      storage: 100Mi
